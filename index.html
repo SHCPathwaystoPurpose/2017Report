@@ -1,0 +1,529 @@
+<!--title-->
+<title>Spring Hill College QEP Report Year 1</title>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://www.google.com/jsapi"></script>
+<script>
+$('a[href^="#"]').on('click', function(event) {
+
+    var target = $(this.getAttribute('href'));
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 900);
+    }
+
+});
+
+
+
+// Google Charts //
+//Chart 1//
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart1);
+function drawChart1() {
+  var data = google.visualization.arrayToDataTable([
+    ['Year', 'Reach'],
+    ['Freshman*',  389],
+    ['Sophomore',  179],
+    ['Junior',  96],
+    ['Senior',  79]
+  ]);
+
+  var options = {
+    colors: ['#f9a11b', '#039691', '#ef4b24', '#3d1951', '#65666a'],
+    legend: {position: 'none'},
+    fontName: 'Open Sans',
+    pieHole: .6,
+     };
+
+var chart = new google.visualization.PieChart(document.getElementById('Impact_Class'));
+  chart.draw(data, options);
+}
+
+//Chart2//
+
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart2);
+function drawChart2() {
+  var data = google.visualization.arrayToDataTable([
+    ['Year', 'SLO 1', 'SLO 2', 'SLO 3'],
+    ['First Year',  2.01, 1.85, 1.64],
+    ['Middle Years',  3.03, 2.35, 2.26],
+    ['Final Year',  3.75, 3.83, 3.57],
+  ]);
+
+  var options = {
+    colors: ['#f9a11b', '#039691', '#ef4b24'],
+    pointSize: 8,
+    vAxis: { viewWindowMode:'explicit',
+            viewWindow: {
+              max:5,
+              min:1
+            }},
+    animate: {"startup": true},
+    legend: {position: 'none'},
+    fontName: 'Open Sans'
+  };
+
+  var chart = new google.visualization.AreaChart(document.getElementById('SLODev'));
+  chart.draw(data, options);
+}
+
+//Chart 3//
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart3);
+function drawChart3() {
+  var data = google.visualization.arrayToDataTable([
+    ['Learning Outcome', 'Non-Participants', 'Participants'],
+    ['SLO 1**',  2.85, 3.38],
+    ['SLO 2*', 2.60, 3.13],
+    ['SLO 3**', 2.41, 2.94],
+  ]);
+
+  var options = {
+    colors: ['#65666a','#3d1951'],
+    legend: {position: 'none'},
+    fontName: 'Open Sans',
+     vAxis: {minValue: 1, maxValue: 5},
+     };
+
+var chart = new google.visualization.ColumnChart(document.getElementById('Course_Comparison'));
+  chart.draw(data, options);
+}
+
+$(window).resize(function(){
+  drawChart1();
+  drawChart2();
+});
+</script>
+</head>
+<body>
+<div class="main">
+  <section>
+<div id="section1">
+     <div class="jumbotron-title">
+      <div class="title-text"><h1>PATHWAYS TO PURPOSE</h1>
+        <h3>Spring Hill College Quality Enhancement Plan Report</h3>
+      YEAR 1
+      </div> 
+        </div></div></div>    
+
+<a id="arrows" href="#section2"><div class="nav bounce">&darr;&darr;&darr;</div></a>  
+</div>
+</section>
+<!--Student Learning Outcomes-->
+<section>
+<div id="section2" class="section">
+  <div class="jumbotron-logo-bkg">
+    <div class="jumbotron-text-overlay">
+      
+  <div class="row">
+    <div class="col-2">
+      &nbsp;
+    </div>
+    <div class="col-10 col-m-12">
+         <h2>STUDENT LEARNING OUTCOMES</h2>
+  </div>
+  </div>
+  
+<div class="row">
+    <div class="col-3">
+      &nbsp;
+    </div> 
+      <div class="col-1 col-m-1"><span class="number-box yellow-hover">1</span></div>
+      <div class="col-5 col-m-11"><p>Students will ask and explore fundamental questions of vocation</p><br>
+        </div>  
+    <div class="col-3">
+      &nbsp;
+  </div> 
+      </div>
+
+ <div class="row">
+    <div class="col-3">
+      &nbsp;
+    </div> 
+      <div class="col-1 col-m-1"><span class="number-box green-hover">2</span></div>
+      <div class="col-5 col-m-11"><p>Students will integrate and make sense of those moments during their college experience when they felt called, purposeful, or inspired</p><br></div>  
+    <div class="col-3">
+      &nbsp;
+    </div> 
+      </div>
+  <div class="row">
+    <div class="col-3">
+      &nbsp;
+    </div> 
+      <div class="col-1 col-m-1"><span class="number-box orange-hover">3</span></div>
+      <div class="col-5 col-m-11"><p>Students will demonstrate an understanding that vocational discernment is an ongoing process</p><br>
+        </div>  
+    <div class="col-3">
+      &nbsp;
+    </div> 
+      </div>
+  
+    <div class="row">
+    <div class="col-2">
+      &nbsp;
+    </div>
+    <div class="col-10 col-m-12">
+         <h2>CAMPUS IMPACT OUTCOME</h2>
+  </div>
+  </div>
+<div class="row">
+    <div class="col-3">
+      &nbsp;
+    </div> 
+           <div class="col-6 col-m-12"><p>Pathways to Purpose will develop a campus-wide culture of vocational discernment.</p><br>
+        </div>  
+    <div class="col-3">
+      &nbsp;
+    </div> 
+      </div>
+      </div></div>
+              
+  </div>
+
+<a href="#section3"><div class="nav">&darr;&darr;&darr;</div></a>  
+</div>
+
+<!--Developmental CUE Assessment-->
+<div id="section3" class="section">
+   <div class="row">
+      &nbsp;
+    </div> 
+  <div class="row">
+    <div class="col-1">&nbsp;
+    </div>
+    <div class="col-5 col-m-12 justify">
+      <h3>Developmental Learning</h3>
+     <p>To better understand how students develop their ideas of vocation and purpose throughout their college experience Pathways to Purpose gathered a group of 8 faculty and staff members to assess and rate a collection of 150 essays pulled from student ePortfolios. 50 essays from each level were pulled at random from a collection of over 500 ePortfolios. Students are asked to respond to prompts at three points along their undergraduate experience: during the fall of their first year, after completing an experiential learning course or project during their sophomore or junior year, and as part of a reflection during their final year. In order to rate the responses to each prompt, assessors were normed on the <a href="http://pathways.shc.edu/wp-content/uploads/2017/06/VocationalDiscernmentRubric.pdf">Pathways to Purpose Rubric</a> and each essay was rated by 3 different individuals with a reliability rating over .8 for all learning outcomes.</p>
+      <h3>Student Learning Outcome Development</h3>
+  <table>
+    <tr><td></td><th>SLO 1</th><th>SLO 2</th><th>SLO 3</th></tr>
+    <tr class="yellow-bkg-hover"><td >First Year</td><td>2.01</td><td>1.85</td><td>1.64</td></tr>
+    <tr class="green-bkg-hover"><td >Middle Years</td><td>3.03</td><td>2.35</td><td>2.26</td></tr>
+    <tr class="orange-bkg-hover"><td >Final Year</td><td>3.75</td><td>3.83</td><td>3.57</td></tr>
+      </table></div>
+    <div class="col-5 col-m-12 center">
+      <div id="SLODev" class="chart"></div>
+    </div>
+    <div class="col-1">&nbsp;
+    </div>
+  
+  
+  </div></div>
+<a id="arrows" href="#section5"><div class="nav">&darr;&darr;&darr;</div></a>  
+</div>
+
+<!--Impact-->
+<div id="section5" class="section">
+    <div class="row">
+         &nbsp;</div>
+  <div class="row">
+    <div class="col-1">
+      &nbsp;</div>
+    <div class="col-4 col-m-12 center"><div class="jumbotron-culture-bkg">
+    <div class="jumbotron-text-overlay">
+      <span class="large-text white-hover">738</span> <br><h3>Unique students engaged in Pathways to Purpose</h3><br><br>
+    <span class="large-text white-hover">53</span><br> <h3>Unique faculty/staff engaged in Pathways to Purpose</h3>
+      </div></div></div>
+    <div class="col-2">&nbsp
+    </div>
+    <div class="col-4 col-m-12"><div id="Impact_Class" class="chart"></div>
+      <div class="caption">*All first year students engaged in Pathways to Purpose through their required LEAP course.</div></div>
+    <div class="col-1">
+      &nbsp;</div>
+  </div>
+
+</div>
+<a id="arrows" href="#section6"><div class="nav">&darr;&darr;&darr;</div></a>  
+</div>
+
+<!--Guidebook-->
+<div id="section6" class="section">
+  <div class="jumbotron-guidebook-bkg">
+    <div class="row">&nbsp;</div>
+  <div class="row">
+    <div class="col-1"> &nbsp;</div>
+    <div class="col-4 col-m-12 white-bkg justify">
+      <h3>Guidebook for Vocational Discernment</h3>
+      <p>A Guidebook provided the structure for Pathways to Purpose. The Guidebook outlined activities from across campus to guide students in a developmental structure for vocational discernment. The Guidebook was designed to be a collection of activities that successful students did, therefore many of the activities found in the Guidebook pre-date Pathways to Purpose and the implementation of the program.</p>
+      <p><a href="http://pathways.shc.edu/guidebook">Virtual Guidebook</a> | <a href="https://drive.google.com/file/d/0Bz8k42mRIjKMYndtRlpOVVBxazg/view?usp=sharing">Print Guidebook</a></div></p>
+    <div class="col-3">
+      &nbsp;</div>
+    <div class="col-3 col-m-12 center middle">
+      <div class="white-bkg-hover"><span class="large-text">537</span> <br><h3>Guidebook activities completed</h3></div><br>
+      <div>&nbsp;</div>
+     <div class="white-bkg-hover"><span class="large-text">405</span><br> <h3>Unique students completed at least one Guidebook activity</h3></div></div>
+    </div>
+    <div class="col-1"> &nbsp;</div>
+  </div>
+    </div>
+    
+</div>
+<a id="arrows" href="#section7"><div class="nav">&darr;&darr;&darr;</div></a>  
+</div>
+
+<!--Sophomore Dinner-->
+<div id="section7" class="section">
+
+  <div class="row">
+    <div class="col-2">
+      &nbsp;
+    </div>
+    <div class="col-10 col-m-12">
+         <h2>SOPHOMORE DINNER</h2>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-2">
+      &nbsp;</div>
+    <div class="col-4 col-m-6">
+      <div class="jumbotron-sophdinner-bkg">
+    <div class="jumbotron-text-overlay-right">
+      <div id="quote">"I really valued the chance to get to know students I had never met."</div>
+      </div>
+      </div>
+    </div>
+    <div class="col-4 col-m-5 justify">
+      <h3>80 sophomores and 34 faculty and staff members joined together for the Sophomore Dinner.</h3>
+    <p>Sophomore students, faculty, and staff gathered during the first week of classes in the fall for a semi-formal dinner. Vocation and vocational discernment were introduced to the sophomores at the first annual Sophomore Class Dinner. Faculty, staff, and students were encouraged to meet new people and interact on topics of values, goals, and community. This gave students an opportunity to see their sophomore year as an important moment in time where they could really start to consider their place in the world and what it means to have a vocation or a calling.</p>
+    </div>
+    
+    <div class="col-2"> &nbsp;</div>
+  </div>
+    
+</div>
+<a id="arrows" href="#section8"><div class="nav">&darr;&darr;&darr;</div></a>  
+</div>
+
+<!--Small Groups-->
+<div id="section8" class="section">
+  <div class="row">
+    <div class="col-2">
+      &nbsp;
+    </div>
+    <div class="col-10 col-m-12">
+         <h2>SMALL GROUP DISCUSSIONS</h2>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+      &nbsp;</div>
+    <div class="col-4 col-m-12">
+      <div class="justify"><h3>10 students and 16 faculty/staff members joined Small Group Discussions.</h3>
+    <p>Small Group Discussions gave the campus community an opportunity to deepen their understanding of vocation as it related to a specific topic or field. All Small Groups met at least three times throughout the year for discussions or activities that furthered their own ideas about vocation.</p></div>
+      <br>
+            <h4>Examples of Small Group Activities</h4>
+
+<p>&rarr;Lunch with President Puto</p>
+ <p>&rarr;Attendance at a chemistry conference</p>
+<p>&rarr;Faculty dinner discussions of ways to integrate vocation into Math courses</p>
+  <p>&rarr;Tour of the Southern Light Data Center</p>
+    </div>
+    <div class="col-4 col-m-12"><img src="http://pathways.shc.edu/wp-content/uploads/2017/06/background_smallgroup1.png" width="100%"><br>
+      <p><a href="http://pathways.shc.edu/small-group-discussions/">Small Group Registration</a> | <a href="http://pathways.shc.edu/resources/discussion-activity-resources/">Small Group Resources</a></div></p>
+    </div>
+       <div class="col-2">
+      &nbsp;</div>
+  </div>
+      
+</div>
+<a id="arrows" href="#section9"><div class="nav">&darr;&darr;&darr;</div></a>  
+</div>
+
+<!--VOC DSRCN Courses-->
+<div id="section9" class="section">
+  <div class="row">
+    <div class="col-2">
+      &nbsp;
+    </div>
+    <div class="col-10 col-m-12">
+         <h2>VOCATIONAL DISCERNMENT CURRICULUM</h2>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-1">
+      &nbsp;</div>
+    <div class="col-5 col-m-12 right">
+      <div class="purple-hover"><span class="large-text">194</span></div><br>
+      <h3>Students completed one of 14 courses specifically focused on vocational discernment.</h3><br>
+      <div class="justify-right"><p>Any faculty member could choose to focus their course on topics of vocational discernment. The majority of the vocational discernment courses offered were classes in the core curriculum.</p> <p>The following graph shows a comparison between non-participants (students who did not take a vocational discernment course) and participants (students who completed at least one vocational discernment course).  Participants had significantly higher ratings on the Pathways to Purpose rubric ratings, indicating that these courses may have had a positive affect on their understandings of vocation compared to those students who did not complete one of such courses.</p></div>
+    </div>
+    <div class="col-5 col-m-12 center">
+      <div id="Course_Comparison" class="chart"></div>
+      <div class="caption">One-sided t-test for difference in means, Ha >H0. Significant at p < 0.05 indicated by “ * .” and at p < 0.01 indicated by “ ** ”.</div>
+    </div>
+    <div class="col-1">
+      &nbsp;</div>
+   
+</div>
+</div>
+
+<a id="arrows" href="#section10"><div class="nav">&darr;&darr;&darr;</div></a>  
+</div>
+
+<!--Student Retreat-->
+<div id="section10" class="section">
+  <div class="row">
+    
+    <div class="col-2">
+      &nbsp;
+    </div>
+    <div class="col-10 col-m-12">
+         <h2>STUDENT RETREATS</h2>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-2">
+      &nbsp;</div>
+    <div class="col-3 col-m-5 justify-right">
+      <span class="large-text green-hover">19</span><br>
+      <h3>Unique students attended an overnight retreat on vocation.</h3>
+       <p>The Student Retreat on Vocation was open to all Sophomore and Junior students. Students were joined by faculty and staff facilitators and several students served as student leaders for small groups at the retreat. The overnight retreat provided an opportunity for students to explore vocubulary around vocation, to reflect upon where to find meaning and purpose in daily life, and to hear the stories of faculty and staff members.</p>
+    </div>
+      <div class="col-1 col-m-1">
+      &nbsp;</div>
+    <div class="col-4 col-m-6">
+      <div class="jumbotron-sturetreat-bkg">
+    <div class="jumbotron-text-overlay-right">
+      <div id="quote">"I gained a greater perspective of my own future, but also learned so much about those of others' as well. I was challenged and often taken out of my comfort zone, but it was all so worth it."</div>
+        </div>
+      </div>
+    </div>
+ <div class="col-2"> &nbsp;</div>
+       </div>
+
+    
+</div>
+<a id="arrows" href="#section11"><div class="nav">&darr;&darr;&darr;</div></a>  
+</div>
+
+<!--Faculty/Staff Retreat-->
+<div id="section11" class="section">
+  <div class="row">
+    <div class="col-2">
+      &nbsp;
+    </div>
+    <div class="col-10 col-m-12">
+         <h2>FACULTY/STAFF RETREAT</h2>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+      &nbsp;</div>
+    <div class="col-3 col-m-5 right">
+      <span class="large-text purple-hover">18</span><br>
+      <h3>Faculty and staff members attended the overnight retreat on vocation.</h3>
+      
+      <div class="justify-right">
+        <p>The Faculty/Staff Retreat on Vocation was open to all faculty and staff members. The overnight retreat gave faculty and staff an opportunity to reflect upon their own vocations, to deepen their appreciation for what makes their lives meaningful, to explore their own motivations in life and how they manifest into actions and impacts on the world. </p>
+      </div>
+    </div>
+    <div class="col-1 col-m-1">
+      &nbsp;</div>
+    <div class="col-4 col-m-6"><div class="jumbotron-facretreat-bkg">
+    <div class="jumbotron-text-overlay-right">
+      <div id="quote">"[This retreat] helped me find much more value in my work and bond with other departments."</div></div></div>
+ <div class="col-2"> &nbsp;</div>
+       </div>
+
+    
+  </div></div>
+<a id="arrows" href="#section12"><div class="nav">&darr;&darr;&darr;</div></a>  
+</div>
+
+<!--Ambassadors-->
+<div id="section12" class="section">
+  <div class="row">
+    <div class="col-2">
+      &nbsp;
+    </div>
+    <div class="col-10 col-m-12">
+         <h2>STUDENT AMBASSADORS</h2>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+      &nbsp;</div>
+    <div class="col-4 col-m-6">
+      <div class="jumbotron-ambassador-bkg">
+    <div class="jumbotron-text-overlay-right">
+      <div id="quote">"[As an ambassador] you're the set example to leading others to fully expressing themselves."</div>
+        </div>
+      </div></div>
+    <div class="col-4 col-m-5 justify">
+      <h3>3 students served as ambassadors for Pathways to Purpose.</h3>
+      <p>Students represented three different classifications and three different majors. These students provided support at events, as retreat facilitators, and assisted with the development of social media outreach campaigns.</p>
+    </div>
+    
+ <div class="col-2"> &nbsp;</div>
+       </div>
+
+    
+</div>
+<a id="arrows" href="#section13"><div class="nav">&darr;&darr;&darr;</div></a>  
+</div>
+
+<!--Vocation Lunches-->
+<div id="section13" class="section">
+  <div class="row">
+    <div class="col-2">
+      &nbsp;
+    </div>
+    <div class="col-10 col-m-12">
+         <h2>VOCATION LUNCHES</h2>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-2">
+      &nbsp;</div>
+    <div class="col-4 col-m-5 justify">
+      <h3>86 unique students and 21 unique faculty attended a Vocation Lunch.</h3>
+      <p>Vocation lunches provide an opportunity for students and faculty to engage in dialogue over a lunch in the cafeteria. Vocation lunches allowed us to formalize some of the informal conversations that were already happening between students and faculty/staff. Faculty and staff members invited specific students to spend the lunch with and were encouraged to share their own vocation story, allowing the students to see the faculty/staff member as a whole person.</p> </div>
+      <div class="col-4 col-m-6"> <span id="quote"><div class="jumbotron-vocationlunch-bkg">
+    <div class="jumbotron-text-overlay-right">"It truly was a wonderful experience, I felt honored to have had this opportunity to get to know our students on a different level. "</div></div></span></div>
+    <div class="col-2">
+      &nbsp;</div>
+  </div>
+</div>
+<a id="arrows" href="#section14"><div class="nav">&darr;&darr;&darr;</div></a>  
+</div>
+<!--Vocation Lunches-->
+<div id="section14" class="section">
+    <div class="row">
+        &nbsp;</div> 
+  
+  <div class="row">
+    
+    <div class="col-2">
+      &nbsp;</div>
+    
+    <div class="col-3 col-m-5">
+      <img src="http://pathways.shc.edu/wp-content/uploads/2016/08/SHC-PathwaysToPurposeLogo.png" width="100%"> </div>
+    
+    <div class="col-1 col-m-1">
+      &nbsp;</div>
+    
+    <div class="col-4 col-m-6 justify"> <h3>Spring Hill College's Quality Enhancement Plan Year One</h3>
+    <p>Students, faculty, and staff have all been central in culivating a culture of vocational discernment as we encourage our campus community to reflect on what it means to live a fulfilling and meaningful life. This report doesn't cover the vastness and detail of the effort, reflection, and activities that make Spring Hill College a place of vocational discernment. The work of the Quality Enhancement Plan extends well beyond the work of Pathways to Purpose as faculty and staff across campus integrate topics of purpose and vocation in their courses, their programs, and their daily conversations with our students. We aim to continue to provide experiences that give students opportunities to discover their unique service to the world.</p><br>
+   
+      <a href="http://www.shc.edu/pathways">WEBSITE</a> |  <a href="emailto:pathways@shc.edu">CONTACT</a>
+        </div>
+    
+    <div class="col-2">
+      &nbsp;</div>
+    
+  </div>
+</div>
+  <div class="footer">
+  Pathways to Purpose is the Quality Enhancement Plan (QEP) of <a href="http://www.shc.edu"> Spring Hill College</a>. This report was prepared and created by Stephanie Steiert, Administrative Director of Pathways to Purpose.</div>
+
+</div>
+</body>
